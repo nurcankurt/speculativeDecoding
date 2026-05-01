@@ -6,3 +6,6 @@ out/
 
 # Visual Studio
 .vs/
+
+# CMake generated VS solution
+build_vs/
