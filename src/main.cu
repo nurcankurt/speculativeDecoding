@@ -40,6 +40,7 @@
 #include "verification.cuh"
 #include "residual_sample.cuh"
 #include "benchmark.cuh"
+#include "pinned_benchmark.cuh"
 #include "cpu_baseline.h"
 #include "npy_loader.h"
 
@@ -295,6 +296,9 @@ int main(int argc, char* argv[]) {
 
         // Mode 3: Run batched benchmarks (GPU advantage!)
         run_batched_benchmarks(vocab_size, num_trials > 50 ? 50 : num_trials);
+
+        // Lecture 4: Pinned Memory Benchmark
+        run_pinned_benchmark(num_trials > 50 ? 50 : num_trials);
     }
 
     printf("Done.\n");
