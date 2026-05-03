@@ -6,7 +6,7 @@ set(CMAKE_CUDA_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CUDA_STANDARD_REQUIRED ON)
 
-set(CMAKE_CUDA_ARCHITECTURES 75)
+set(CMAKE_CUDA_ARCHITECTURES 86)
 
 message(STATUS "Building for CUDA architecture: sm_${CMAKE_CUDA_ARCHITECTURES}")
 
@@ -17,6 +17,8 @@ add_executable(speculative_decoding
     src/benchmark.cu
     src/cpu_baseline.cpp
     src/npy_loader.cpp
+    src/pinned_benchmark.cu
+    src/stream_pipeline.cu
 )
 
 target_include_directories(speculative_decoding PRIVATE src)

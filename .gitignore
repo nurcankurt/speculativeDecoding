@@ -3,9 +3,26 @@ out/
 *.exe
 *.obj
 *.pdb
+*.ilk
+*.ipdb
 
 # Visual Studio
 .vs/
+*.suo
+*.user
 
 # CMake generated VS solution
 build_vs/
+build/
+
+# Profiling outputs
+*.nsys-rep
+*.sqlite
+profile_results.txt
+
+# Generated data
+data/
+
+# IDE
+.claude/
+.vscode/

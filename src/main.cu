@@ -41,6 +41,7 @@
 #include "residual_sample.cuh"
 #include "benchmark.cuh"
 #include "pinned_benchmark.cuh"
+#include "stream_pipeline.cuh"
 #include "cpu_baseline.h"
 #include "npy_loader.h"
 
@@ -296,6 +297,9 @@ int main(int argc, char* argv[]) {
 
         // Mode 3: Run batched benchmarks (GPU advantage!)
         run_batched_benchmarks(vocab_size, num_trials > 50 ? 50 : num_trials);
+
+        // Lecture 6: CUDA Streams - Overlapping Transfer and Compute
+        run_stream_benchmark(vocab_size, num_trials > 30 ? 30 : num_trials);
 
         // Lecture 4: Pinned Memory Benchmark
         run_pinned_benchmark(num_trials > 50 ? 50 : num_trials);
