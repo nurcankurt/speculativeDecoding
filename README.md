@@ -236,7 +236,4 @@ pip install transformers torch numpy
 ---
 
 ## References
-
-- Lecture 4: Pinned Memory Optimization
-- Lecture 6: CUDA Streams and Concurrency
 - [Speculative Decoding Paper](https://arxiv.org/abs/2301.10810)
